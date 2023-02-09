@@ -19,5 +19,10 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.3",
     "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "gulp-cheerio": "^1.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-svg-sprite": "^2.0.1"
   }
 }
