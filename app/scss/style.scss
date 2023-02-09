@@ -3,6 +3,410 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  padding: 60px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
+.logo{
+  .logo-img{
+    transition: all .3s;
+    &:focus{
+    opacity: 0.9;
+    }
+    &:hover{
+    opacity: 0.8;
+    }
+    &:active{
+    opacity: 0.5;
+    }
+  }
+}
+  
+.menu{
+  display: flex;
+  align-items: center;
+  &__list{
+   display: flex;
+   margin-right: 40px;
+  }
+  &__list-item:not(:last-child){
+    padding-right: 45px;
+  }
+  &__list-link{
+    color: $textual;
+    transition: all .2s;
+    @extend %rubik-400;
+    &:focus{
+      color: $accent;
+    }
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.01);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+    &:active{
+      color: $textual;
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+
+    }
+  }
+}
+
+.user-nav{
+  display: flex;
+  &__search,
+  &__cart{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  transition: all .3s;
+  }
+
+   &__search{
+    margin-right: 10px;
+   }
+
+  &__search::before{
+    content: '';
+    position: absolute;
+    mask-image: url('../images/sprite.svg#icon-search');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: #000;
+    mask-size: 18px;
+    height: 40px;
+    width: 40px;
+ 
+  }
+  
+   &__cart::before{
+    content: '';
+    position: absolute;
+    mask-image: url('../images/sprite.svg#icon-cart');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: #000;
+    mask-size: 18px;
+    height: 40px;
+    width: 40px;
+   }
+   
+   &__num{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: 9px;
+    right: 0;
+    font-size: 10px;
+    line-height: 15px;
+    @extend %rubik-400;
+    text-align: center;
+    color: $white;
+    transition: all .5s;
+   }
+
+   &__search:focus,
+   &__cart:focus{
+     background-color: rgba(255, 122, 80, 0.1);
+     box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+     border-radius: 5px;
+    }
+
+    &__search:hover, 
+    &__cart:hover{
+    background-color: #FF7A50;
+    border-radius: 5px;
+    color: $white;
+
+    .user-nav__num{
+      background-color: $white;
+      color: #000;
+    }
+
+    &::before{
+       background-color: $white;
+     }
+   }
+
+   &__search:active, 
+    &__cart:active{
+      background-color: #FFF2ED;
+      border-radius: 5px;
+
+      .user-nav__num{
+      background-color: $accent;
+      color: $white;
+    }
+
+    &::before{
+       background-color: #000;
+     }
+    }  
+}
+
+.footer{
+  border-bottom: 1px solid $gray;
+}
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  @extend %rubik-400;
+  font-size: 18px;
+  &__logo{
+   margin-bottom: 30px;
+   display: block;
+  }
+  &__form-input{
+    background-color: $white;
+    height: 44px;
+    max-width: 200px;
+    width: 100%;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding: 13px 15px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  &__form-btn{
+    border: none;
+    font-size: 14px;
+    background-color: $accent;
+    border-radius: 5px;
+    color: $white;
+    height: 44px;
+    max-width: 200px;
+    width: 100%;
+    display: block;
+    margin-bottom: 71px;
+    padding-left: 40px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+    &::before{
+       content: "";
+       position: absolute;
+       mask-image: url('../images/sprite.svg#icon-telegram');
+       mask-position: center;
+       mask-repeat: no-repeat;
+       background-color: $white;
+       height: 14px;
+       width: 14px;
+       top: 15px;
+       left: 45px;
+     }
+     &:focus{
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px; 
+      color: $accent;
+
+      &::before{
+        background-color: $accent;
+      }
+     }
+     &:hover{
+      background: $white;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+      color: $accent;
+
+      &::before{
+        background-color: $accent;
+      }
+     }
+     &:active{
+      background-color: #FFF2ED;
+      border-radius: 5px;
+      color: $accent;
+
+       &::before{
+        background-color: $accent;
+      } 
+    }
+  }
+  &__navs a{
+    color: $textual;
+  }
+  &__item{
+    margin-bottom: 20px;
+  }
+  &__contact{
+    display: flex;
+    flex-direction: column;
+    padding-right: 90px;
+    position: relative;
+  }
+  &__contact
+  &__adress,
+  &__phone,
+  &__email{
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  &__adress::before,
+  &__phone::before,
+  &__email::before{
+    content: "";
+    position: absolute;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $textual;
+    height: 18px;
+    width: 15px;
+    top: 5px;
+    left: -25px;
+  }
+  &__adress::before{
+     mask-image: url('../images/sprite.svg#icon-location');
+  }
+  &__phone::before{
+    mask-image: url('../images/sprite.svg#icon-call');
+    height: 19px;
+    width: 19px;
+  }
+  &__email::before{
+    mask-image: url('../images/sprite.svg#icon-message');
+    height: 18px;
+    width: 20px;
+  }
+  
+  &__icons{
+    display: flex;
+  }
+  &__icon-facebook{
+    background-color: $silver;
+    width: 39px;
+    height: 39px;
+    margin-right: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+  &::before{
+    content: "";
+    position: absolute;
+     mask-image: url('../images/sprite.svg#icon-facebook');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $textual;
+    height: 23px;
+    width: 25px;
+    right: 7px;
+    top: 8px;  
+    }
+   &:focus{
+    background-color: #FFF2ED;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+   }
+   &:hover{
+    background-color: #FF7A50;
+    &::before{
+      background-color: $white;
+    }
+   }
+   &:active{
+    background-color: #FFF2ED;
+    &::before{
+      background-color: #FF7A50;
+    }
+   }
+  }
+  &__icon-twitter{
+    background-color: $silver;
+    width: 39px;
+    height: 39px;
+    margin-right: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+  &::before{
+    content: "";
+    position: absolute;
+     mask-image: url('../images/sprite.svg#icon-twitter');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $textual;
+    height: 23px;
+    width: 25px;
+    right: 7px;
+    top: 8px;  
+    }
+   &:focus{
+    background-color: #FFF2ED;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+   }
+   &:hover{
+    background-color: #FF7A50;
+    &::before{
+      background-color: $white;
+    }
+   }
+   &:active{
+    background-color: #FFF2ED;
+    &::before{
+      background-color: #FF7A50;
+    }
+   }
+  }
+  &__icon-instagram{
+    background-color: $silver;
+    width: 39px;
+    height: 39px;
+    margin-right: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+  &::before{
+    content: "";
+    position: absolute;
+     mask-image: url('../images/sprite.svg#icon-instagram');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $textual;
+    height: 23px;
+    width: 25px;
+    right: 7px;
+    top: 8px;  
+    }
+   &:focus{
+    background-color: #FFF2ED;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+   }
+   &:hover{
+    background-color: #FF7A50;
+    &::before{
+      background-color: $white;
+    }
+   }
+   &:active{
+    background-color: #FFF2ED;
+    &::before{
+      background-color: #FF7A50;
+    }
+   }
+  }
+}
+.footer-bottom{
+ padding: 30px 0;
+ text-align: center;
+ @extend %rubik-400;
+ &__text{
+  font-size: 14px;
+  line-height: 100%;
+  color: $textual;
+ }
+}
 
 @import 'media';
+
