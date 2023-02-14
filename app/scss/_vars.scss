@@ -6,18 +6,86 @@ $silver:#ececec;
 $gray: #c2c2c2;
 $white: #fff;
 
-%rubik-300{
+%rubik-300 {
   font-family: 'Rubik-Light', sans-serif;
   font-weight: 300;
 }
-%rubik-400{
+
+%rubik-400 {
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
 }
 
-%rubik-500{
+%rubik-500 {
   font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
 }
 
+%btn {
+  border: none;
+  font-size: 14px;
+  background-color: $accent;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
 
+  &:focus {
+    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border-radius: 5px;
+    color: $accent;
+  }
+
+  &:hover {
+    background: $white;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border-radius: 5px;
+    color: $accent;
+  }
+
+  &:active {
+    box-shadow: none;
+    background-color: #FFF2ED;
+    border-radius: 5px;
+    color: $accent;
+  }
+}
+
+%link-text {
+  @extend %rubik-400;
+  line-height: 150%;
+  color: $default;
+  text-decoration: revert;
+
+  &:focus {
+    text-decoration: none;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border-radius: 5px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $accent;
+  }
+
+  &:active {
+    color: $default;
+    box-shadow: none;
+    text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+  }
+}
+
+%categories-btn {
+  padding: 22px 32px 22px 86px;
+  margin-right: 20px;
+  background-color: #ffffff;
+  @extend %rubik-400;
+  color: $default;
+  border: none;
+  box-shadow: 0px 0px 0px 1px #ECECEC;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}

@@ -1,9 +1,9 @@
 html,
-body{
+body {
   height: 100%;
 }
 
-body{
+body {
   background-color: $body;
   color: $default;
   font-size: 20px;
@@ -13,13 +13,18 @@ body{
   flex-direction: column;
 }
 
-.main{
+.main {
   flex-grow: 1;
 }
 
-.container{
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+.title {
+  font-size: 36px;
+  text-align: center;
+  @extend %rubik-500;
+}

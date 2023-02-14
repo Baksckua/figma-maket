@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +14,12 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
@@ -24,33 +27,168 @@
           <img class="logo-img " src="/images/logo.png" alt="Логотип Магазина">
         </a>
         <div class="menu">
-         <nav class="menu__inner">
-           <ul class="menu__list">
-             <li class="menu__list-item">
-               <a class="menu__list-link" href="#">Главная</a>
-             </li>
-             <li class="menu__list-item">
-               <a class="menu__list-link" href="#">Блюда</a>
-             </li>
-             <li class="menu__list-item">
-               <a class="menu__list-link" href="#">Контакты</a>
-             </li>
-           </ul>
-         </nav>
-            <div class="user-nav">
-             <a class="user-nav__search" href="#">
-             </a>
-             <a class="user-nav__cart" href="#">
-               <span class="user-nav__num">4</span>
-             </a>
-            </div>
+          <nav class="menu__inner">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Главная</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Блюда</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-nav">
+            <a class="user-nav__search" href="#">
+            </a>
+            <a class="user-nav__cart" href="#">
+              <span class="user-nav__num">4</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
   <main class="main">
+    <section class="top-section">
+      <div class="container">
+        <div class="top-section__delivery">
+          <div class="top-section__delivery-info">
+            <h1 class="top-section__delivery-title">
+              Доставка
+              <span>за 15 минут</span>
+            </h1>
+            <p class="top-section__delivery-text">
+              Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+            </p>
 
+            <button class="top-section__delivery-button">Заказать</button>
+            <a class="top-section__delivery-link" href="#">Подробнее</a>
+
+          </div>
+          <img class="top-section__delivery-img" src="../images/scooterGuy.png" alt="скутер парень">
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="container">
+        <h2 class="categories__title title">Популярные категории</h2>
+        <div class="categories__popular">
+          <button class="categories__btn-burgers" data-filter="all">Бургеры</button>
+          <button class="categories__btn-pizza" data-filter=".category-a">Пицца</button>
+          <button class="categories__btn-sandwiches" data-filter=".category-b">Сендвичи</button>
+          <button class="categories__btn-asian" data-filter=".category-c">Азиатская кухня</button>
+          <button class="categories__btn-sets" data-filter=".category-d">Cеты</button>
+        </div>
+        <div class="categories__kart">
+          <div class="categories__kart-menu mix category-a">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 1.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 1.jpg" alt="Бургер">
+            </a>
+            <h3 class="categories__kart-text">Чизбургер с листьями салата</h3>
+            <span class="categories__kart-price">160 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-a">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 2.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 2.jpg" alt="Бифбургер">
+            </a>
+            <h3 class="categories__kart-text">Бифбургер</h3>
+            <span class="categories__kart-price">190 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-a">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 3.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 3.jpg" alt="Чизбургер">
+            </a>
+            <h3 class="categories__kart-text">Королевский чизбургер</h3>
+            <span class="categories__kart-price">260 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-b">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 4.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 4.jpg" alt="Черный Бургер">
+            </a>
+            <h3 class="categories__kart-text">Черный гамбургер</h3>
+            <span class="categories__kart-price">199 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-b">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 5.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 5.jpg" alt="Бургер">
+            </a>
+            <h3 class="categories__kart-text">Чикен бургер</h3>
+            <span class="categories__kart-price">180 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-b">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 6.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 6.jpg" alt="Бургер">
+            </a>
+            <h3 class="categories__kart-text">Чизбургер с листьями салата</h3>
+            <span class="categories__kart-price">160 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-c">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 7.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 7.jpg" alt="Бифбургер">
+            </a>
+            <h3 class="categories__kart-text">Бифбургер</h3>
+            <span class="categories__kart-price">190 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-c">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 8.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 8.jpg" alt="Чизбургер">
+            </a>
+            <h3 class="categories__kart-text">Королевский чизбургер</h3>
+            <span class="categories__kart-price">260 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-d">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 9.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 9.jpg" alt="Черный Бургер">
+            </a>
+            <h3 class="categories__kart-text">Черный гамбургер</h3>
+            <span class="categories__kart-price">199 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="categories__kart-menu mix category-d">
+            <a data-fancybox="images" data-width="500" data-height="500" href="../images/menu/product 10.jpg">
+              <img class="categories__kart-img" src="../images/menu/product 10.jpg" alt="Бургер">
+            </a>
+            <h3 class="categories__kart-text">Чикен бургер</h3>
+            <span class="categories__kart-price">180 грн.</span>
+            <div class="categories__karts-btn">
+              <button class="categories__kart-btn">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <a class="categories__kart-bottom" href="#">Показать еще</a>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -62,9 +200,10 @@
           </a>
           <form class="footer-top__form" action="#">
             <label class="sr-only" for="form-subscride">
-              <input class="footer-top__form-input" id="form-subscride" name="подписка" type="@email" placeholder="Ваш email" required>
-              </label>
-              <button class="footer-top__form-btn" type="button" >Подписаться</button>
+              <input class="footer-top__form-input" id="form-subscride" name="подписка" type="@email"
+                placeholder="Ваш email" required>
+            </label>
+            <button class="footer-top__form-btn" type="button">Подписаться</button>
           </form>
         </div>
         <div class=" footer-top__nav footer-top__navs">
@@ -138,6 +277,10 @@
     <p class="footer-bottom__text">© 2022 Simple Food</p>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
